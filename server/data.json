@@ -1,0 +1,48 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "first post",
+            "content": "content for first post",
+            "comments": [
+                "first comment",
+                "second comment"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "second post",
+            "content": "content for second post"
+        },
+        {
+            "id": 3,
+            "title": "third post",
+            "content": "content for third post"
+        },
+        {
+            "id": 4,
+            "title": "fourth post",
+            "content": "content for fourth post"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "firstname": "Ivanov",
+            "secondName": "Ivan",
+            "age": "18"
+        },
+        {
+            "id": 2,
+            "firstname": "Petrov",
+            "secondName": "Petr",
+            "age": "17"
+        },
+        {
+            "id": 3,
+            "firstname": "Sidorov",
+            "secondName": "Sidor",
+            "age": "19"
+        }
+    ]
+}
