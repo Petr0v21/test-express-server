@@ -13,5 +13,7 @@ app.post('/db', (req, res) => {
         if (err) return console.log(err);
     })
 })
-
+app.get('/data.json', (req, res) => {
+    res.send("Hello")
+})
 app.listen(3000, () => console.log('Server is running'))
