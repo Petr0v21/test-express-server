@@ -9,11 +9,19 @@ app.use(cors())
 
 app.post('/db', (req, res) => {
     console.log(req.body)
-    fs.appendFile('server/db.txt', req.body.message + '\n', function (err) {
+    fs.appendFile('./db.txt', req.body.message + '\n', function (err) {
         if (err) return console.log(err);
     })
 })
-app.get('/data.json', (req, res) => {
-    res.send("Hello")
+app.get('/', (req, res) => {
+    res.send({message: "hello"})
 })
-app.listen(3000, () => console.log('Server is running'))
+
+app.get('/users', (req, res) => {
+    const data = JSON.parse(fs.readFileSync('./data.json'));
+    res.send({
+        users: data.users,
+        posts: data.posts
+    });
+})
+app.listen(4000, () => console.log('Server is running'))
