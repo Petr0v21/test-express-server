@@ -5,9 +5,11 @@ const SendInput = () => {
   
   const inputHandler = (e) => {
     setInputValue(e.target.value);
+
   };
   
   const sendMessage = () => {
+    console.log(inputValue)
     fetch("http://localhost:4000/db", {
       method: "POST",
       mode: "cors",
@@ -17,6 +19,7 @@ const SendInput = () => {
       },
       body: JSON.stringify({ message: inputValue }),
     });
+    setInputValue("")
   };
 
   return (
