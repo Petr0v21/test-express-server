@@ -6,7 +6,6 @@ import TopLinks from "./TopLinks";
 import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 
-
 const App = () => {
   return (
     <BrowserRouter>
@@ -17,6 +16,8 @@ const App = () => {
         <Route path='/input' component={SendInput}/>
       </div>
     </BrowserRouter>
+    
+    
   );
 };
 

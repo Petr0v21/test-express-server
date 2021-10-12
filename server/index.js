@@ -1,15 +1,19 @@
 import express from 'express'
 import cors from 'cors'
 import fs from 'fs'
+import data from './db.json'
 
 const app = express()
-
+const count = 0;
 app.use(express.json())
 app.use(cors())
 
+
 app.post('/db', (req, res) => {
-    console.log(req.body)
-    fs.appendFile('./db.txt', req.body.message + '\n', function (err) {
+    // jsondb[req.body.message] = req.body.message
+    // let stringdb = JSON.stringify(data);
+    data[req.body.message] = req.body
+    fs.writeFile('./db.json', JSON.stringify(data), function (err) {
         if (err) return console.log(err);
     })
 })
